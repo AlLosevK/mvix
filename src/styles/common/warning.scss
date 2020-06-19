@@ -1,0 +1,17 @@
+.warning {
+  background: $opGrad;
+  padding: 29px 0;
+  line-height: 26px;
+
+  &__content {
+    color: $bg;
+    width: 92.5%;
+    font-size: 17px;
+    margin: 0;
+    padding: 0 10px;
+  }
+}
+
+.icon-alarm {
+  color: $bg;
+}

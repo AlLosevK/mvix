@@ -1,0 +1,116 @@
+@import "../mixins/media";
+
+.header {
+  padding: 19px 0;
+  border: 1px solid rgba(37, 37, 37, 0.2);
+
+  @include media-es {
+    display: none;
+  }
+
+  > .container {
+  }
+
+  &-mob {
+    display: none;
+    position: relative;
+
+    @include media-es {
+      display: grid;
+      padding: 40px 0 20px;
+    }
+
+    > .container {
+
+      @include media-es {
+        width: 368px;
+      }
+
+    }
+  }
+
+  &__logo{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+
+    @include media-es {
+
+    }
+  }
+
+  &__nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 112px;
+    gap: 50px;
+    align-items: center;
+
+    @include media-es {
+      display: none;
+    }
+
+    &-mob {
+      display: none;
+      background-color: $grayBG;
+      color: $deepBlue;
+      position: absolute;
+      top: 96px;
+      left: 0;
+      z-index: 2;
+      width: 100vw;
+      padding: 40px 60px;
+
+
+      &.active {
+        display: grid;
+        grid-template-rows: 50px 50px 50px 50px;
+      }
+    }
+  }
+
+  &__link{
+    font-size: 17px;
+    color: $black;
+    text-decoration: none;
+    text-align: center;
+
+    &-mob {
+      text-align: center;
+    }
+
+    &-signin{
+      color: $bg;
+      padding: 10px 30px;
+      background-color: $blue;
+      border-radius: 20px;
+
+      &-mob {
+        width: 50%;
+        padding: 13px 0 10px;
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.logo{
+  font-family: 'Montserrat', sans-serif;
+  &__icon {
+    padding-right: 24px;
+    border-right: 1px solid #000;
+  }
+  &__desc{
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-left: 24px;
+    font-family: "Montserrat", sans-serif;
+    & span {
+      color: $blue;
+      font-weight: bold;
+      display: block;
+    }
+  }
+}

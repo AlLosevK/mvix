@@ -1,0 +1,41 @@
+@mixin media-es {
+
+    @media (max-width: $mediaWidthES) {
+        @content;
+    }
+}
+
+@mixin media-s {
+
+    @media (min-width: $mediaWidthES) {
+        @content;
+    }
+}
+
+@mixin media-m {
+
+    @media (min-width: $mediaWidthM) {
+        @content;
+    }
+}
+
+@mixin media-l {
+
+    @media (min-width: $mediaWidthL) {
+        @content;
+    }
+}
+
+@mixin media-el {
+
+    @media (min-width: $mediaWidthEL) {
+        @content;
+    }
+}
+
+@mixin media-custom($width) {
+
+    @media (min-width: $width) {
+        @content;
+    }
+}

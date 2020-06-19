@@ -1,0 +1,65 @@
+.title {
+  padding: 109px 0 45px;
+
+  &__text {
+    color: $deepBlue;
+    text-transform: uppercase;
+    font-size: 48px;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+
+  .container {
+    justify-content: center;
+  }
+
+  span {
+    color: $blue;
+  }
+}
+
+.promo {
+  background-color: $deepBlue;
+  padding: 48px 0;
+  position: relative;
+  line-height: 32px;
+
+  .container {
+    display: grid;
+    grid-template-columns: 392px 1fr;
+    gap: 56px;
+  }
+
+  &__btn {
+    border-radius: 32px;
+    padding: 18px 107px 14px;
+    text-align: center;
+    background: $oyGrad;
+    text-decoration: none;
+    color: $bg;
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: bold;
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: 21px;
+    color: $bg;
+  }
+}
+
+.icon-x {
+  color: $bg;
+  position: absolute;
+  top: 45%;
+  transform: translate(-50%, 0);
+  right: 3.75%;
+  background: url("../img/sprite/sprite.svg#x");
+
+  &:hover {
+    cursor: pointer;
+  }
+}
