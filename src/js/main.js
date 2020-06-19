@@ -6,8 +6,10 @@ new Glide('.glide', {
   gap: 32
 }).mount();
 
-function showNav() {
-  var menuBtn = document.getElementById("menuBTN");
-  var menu = document.getElementById("menuNav");
-  menu.classList.add("active");
-}
+var menuBTN = document.getElementById('menuBTN');
+var menu = document.getElementById('menuNav'); // or whatever triggers the toggle
+
+menuBTN.addEventListener('click', function(e) {
+    e.preventDefault();
+    menu.classList.toggle('active'); // or whatever your active class is
+});

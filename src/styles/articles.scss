@@ -6,6 +6,10 @@
     grid-template-rows: 46px 42px 1fr;
     grid-template-columns: 1fr;
     align-items: flex-start;
+
+    @include media-es {
+      grid-template-rows: 46px 2px 1fr;
+    }
   }
 
   &__title {
@@ -18,7 +22,7 @@
   }
 
   &__split {
-    border-top: 2px solid $deepBlue;
+    border-top: 1px solid $deepBlue;
   }
 
   &__content {
@@ -26,6 +30,12 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 31px;
+
+    @include media-es {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 0;
+    }
   }
 }
 
@@ -38,7 +48,16 @@
   border-radius: 16px;
   box-shadow: 0px 4px 16px rgba(1, 24, 117, 0.08), 0px -4px 16px rgba(255, 255, 255, 0.2);
   padding: 16px 0;
-  
+
+  @include media-es {
+    grid-template-rows: 1fr;
+    grid-template-columns: 30px 1fr;
+    background-color: $grayBG;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid $deepBlue;
+  }
+
   &:hover {
     cursor: pointer;
   }
@@ -48,6 +67,12 @@
     grid-column: 1/2;
     margin-left: 30px;
     color: $deepBlue;
+
+    @include media-es {
+      margin-left: 10px;
+      font-size: 14px;
+      width: 10px;
+    }
   }
 
   &__title {
@@ -56,6 +81,12 @@
     font-size: 17px;
     font-weight: bold;
     color: $deepBlue;
+
+    @include media-es {
+      font-size: 15px;
+      color: $blue;
+      font-weight: 400;
+    }
   }
 
   &__view {
@@ -64,6 +95,10 @@
     font-size: 12px;
     color: $deepBlue;
     padding-left: 22px;
+
+    @include media-es {
+      display: none;
+    }
   }
 
   &__date {
@@ -71,10 +106,18 @@
     grid-column: 3/4;
     font-size: 12px;
     color: $deepBlue;
+
+    @include media-es {
+      display: none;
+    }
   }
 }
 
 .view__icon {
   grid-row: 1;
   grid-column: 3;
+
+  @include media-es {
+    display: none;
+  }
 }

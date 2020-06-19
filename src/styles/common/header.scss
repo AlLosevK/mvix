@@ -8,9 +8,6 @@
     display: none;
   }
 
-  > .container {
-  }
-
   &-mob {
     display: none;
     position: relative;
@@ -18,14 +15,6 @@
     @include media-es {
       display: grid;
       padding: 40px 0 20px;
-    }
-
-    > .container {
-
-      @include media-es {
-        width: 368px;
-      }
-
     }
   }
 

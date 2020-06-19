@@ -32,12 +32,16 @@ a {
 }
 
 .container {
-    width: 1280px;
-    margin: 0 auto;
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  width: 1280px;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  @include media-es {
+    width: 368px;
+  }
 }

@@ -4,7 +4,7 @@
   background-color: $grayBG;
   padding-bottom: 60px;
 
-  >.container {
+  > .container {
     flex-direction: column;
   }
 
@@ -15,8 +15,14 @@
     font-family: "Montserrat", sans-serif;
     margin: 0;
     margin-bottom: 17px;
-    span{
 
+    @include media-es {
+      text-align: center;
+      font-size: 24px;
+      color: $bvGrad;
+      background: -webkit-linear-gradient(86.95deg, #2275B4 0%, #60348D 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 
@@ -25,6 +31,11 @@
     margin: 0;
     margin-bottom: 66px;
     font-family: "Montserrat", sans-serif;
+
+    @include media-es {
+      text-align: center;
+      font-size: 15px;
+    }
   }
 }
 
@@ -46,7 +57,7 @@
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     font-size: 320px;
-    line-height: .8em;
+    line-height: 0.8em;
     margin-top: -37px;
     color: $grayBG;
     grid-row: 1;

@@ -1,11 +1,95 @@
 .categories {
+  display: grid;
+  grid-template-areas: "p" "c";
+  grid-template-columns: 1fr;
+  grid-template-rows: 160px 1fr;
+  gap: 50px;
+  padding-bottom: 111px;
+
+  @include media-es {
+    grid-template-areas: "c" "p";
+    grid-template-rows: 1fr 128px;
+  }
+
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 52px;
+
+    @include media-es {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
   }
-  padding-bottom: 111px;
+}
+
+.promo {
+  background-color: $deepBlue;
+  padding: 48px 0;
+  position: relative;
+  line-height: 32px;
+  grid-area: p;
+
+  @include media-es {
+    padding: 32px 0 28px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 392px 1fr;
+    grid-template-rows: 1fr;
+    gap: 56px;
+    grid-area: c;
+
+    @include media-es {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__btn {
+    border-radius: 32px;
+    padding: 18px 107px 14px;
+    text-align: center;
+    background: $oyGrad;
+    text-decoration: none;
+    color: $bg;
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: bold;
+
+    @include media-es {
+      padding: 18px 0 14px;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: 21px;
+    color: $bg;
+
+    @include media-es {
+      display: none;
+    }
+  }
+}
+
+.icon-x {
+  color: $bg;
+  position: absolute;
+  top: 45%;
+  transform: translate(-50%, 0);
+  right: 3.75%;
+  background: url("../img/sprite/sprite.svg#x");
+
+  &:hover {
+    cursor: pointer;
+  }
+
+
+  @include media-es {
+    display: none;
+  }
 }
 
 .category {
@@ -20,6 +104,19 @@
   border-radius: 16px;
   background-color: $bg;
   box-shadow: 0px 32px 64px rgba(37, 37, 37, 0.04);
+
+  @include media-es {
+    grid-column: 1/3;
+    display: none;
+
+    &:nth-child(1) {
+      display: grid;
+    }
+
+    &:nth-child(2) {
+      display: grid;
+    }
+  }
 
   &__label {
     grid-column: 1/3;
@@ -70,5 +167,4 @@
       text-align: right;
     }
   }
-
 }

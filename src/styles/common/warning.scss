@@ -3,6 +3,14 @@
   padding: 29px 0;
   line-height: 26px;
 
+  & .container {
+
+    @include media-es {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
   &__content {
     color: $bg;
     width: 92.5%;
@@ -10,8 +18,15 @@
     margin: 0;
     padding: 0 10px;
   }
+  @include media-es {
+    font-size: 14px;
+  }
 }
 
 .icon-alarm {
   color: $bg;
+
+  @include media-es {
+    margin-bottom: 17px;
+  }
 }
