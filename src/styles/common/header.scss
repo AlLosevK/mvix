@@ -8,6 +8,14 @@
     display: none;
   }
 
+  @include media-s {
+    display: none;
+  }
+
+  @include media-l {
+    display: block;
+  }
+
   &-mob {
     display: none;
     position: relative;
@@ -16,6 +24,15 @@
       display: grid;
       padding: 40px 0 20px;
     }
+
+    @include media-s {
+      display: grid;
+      padding: 40px 0 20px;
+    }
+
+    @include media-l {
+      display: none;
+    }
   }
 
   &__logo{
@@ -23,10 +40,6 @@
     display: -ms-flex;
     display: flex;
     align-items: center;
-
-    @include media-es {
-
-    }
   }
 
   &__nav {
@@ -37,6 +50,15 @@
 
     @include media-es {
       display: none;
+    }
+
+    @include media-s {
+      display: none;
+    }
+
+    @include media-l {
+      display: grid;
+      gap: 25px;
     }
 
     &-mob {
@@ -89,6 +111,10 @@
   &__icon {
     padding-right: 24px;
     border-right: 1px solid #000;
+
+    @include media-l {
+      padding-right: 15px;
+    }
   }
   &__desc{
     font-size: 14px;
@@ -96,6 +122,12 @@
     margin: 0;
     margin-left: 24px;
     font-family: "Montserrat", sans-serif;
+
+    @include media-l {
+      font-size: 12px;
+      margin-left: 15px;
+    }
+
     & span {
       color: $blue;
       font-weight: bold;

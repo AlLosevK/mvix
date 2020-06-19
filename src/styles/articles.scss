@@ -10,6 +10,10 @@
     @include media-es {
       grid-template-rows: 46px 2px 1fr;
     }
+
+    @include media-s {
+      grid-template-rows: 46px 20px 1fr;
+    }
   }
 
   &__title {
@@ -36,6 +40,18 @@
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
       gap: 0;
     }
+
+    @include media-s {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    @include media-s {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 20px;
+    }
   }
 }
 
@@ -58,6 +74,10 @@
     border-bottom: 1px solid $deepBlue;
   }
 
+  @include media-s {
+    padding: 10px 0;
+  }
+
   &:hover {
     cursor: pointer;
   }
@@ -73,6 +93,9 @@
       font-size: 14px;
       width: 10px;
     }
+
+    @include media-s {
+    }
   }
 
   &__title {
@@ -83,6 +106,12 @@
     color: $deepBlue;
 
     @include media-es {
+      font-size: 15px;
+      color: $blue;
+      font-weight: 400;
+    }
+
+    @include media-s {
       font-size: 15px;
       color: $blue;
       font-weight: 400;
@@ -99,6 +128,9 @@
     @include media-es {
       display: none;
     }
+
+    @include media-s {
+    }
   }
 
   &__date {
@@ -110,6 +142,9 @@
     @include media-es {
       display: none;
     }
+
+    @include media-s {
+    }
   }
 }
 
@@ -119,5 +154,8 @@
 
   @include media-es {
     display: none;
+  }
+
+  @include media-s {
   }
 }

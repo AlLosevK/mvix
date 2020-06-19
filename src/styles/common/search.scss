@@ -10,9 +10,16 @@
   margin-top: -48px;
 
   @include media-es {
-    width: 368px;
-    grid-template-columns: 73px 1fr;
-    padding: 19px 22px 19px 30px;
+    width: 88%;
+    grid-template-columns: 10% 90%;
+    padding: 19px 22px;
+    margin-top: -32px;
+  }
+
+  @include media-s {
+    width: 88%;
+    grid-template-columns: 10% 1fr 25%;
+    padding: 19px 22px;
     margin-top: -32px;
   }
 
@@ -46,4 +53,14 @@
 
 .icon-search {
   color: $deepBlue;
+
+  @include media-es {
+    font-size: 16px;
+    width: 16px;
+  }
+
+  @include media-s {
+    font-size: 18px;
+    width: 18px;
+  }
 }

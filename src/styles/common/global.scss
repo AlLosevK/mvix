@@ -42,6 +42,10 @@ a {
   align-items: center;
 
   @include media-es {
-    width: 368px;
+    width: 88%;
+  }
+
+  @include media-s {
+    width: 88%;
   }
 }
