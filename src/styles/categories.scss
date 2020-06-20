@@ -8,17 +8,17 @@
 
   @include media-es {
     grid-template-areas: "c" "p";
-    grid-template-rows: 1fr 128px;
+    grid-template-rows: 1fr auto;
   }
 
   @include media-s {
     grid-template-areas: "c" "p";
-    grid-template-rows: 1fr 128px;
+    grid-template-rows: 1fr auto;
   }
 
   @include media-m {
     grid-template-areas: "p" "c";
-    grid-template-rows: 146px 1fr;
+    grid-template-rows: auto 1fr;
   }
 
   .container {
@@ -148,6 +148,11 @@
 
   @include media-s {
     display: none;
+  }
+
+  @include media-m {
+    display: block;
+    right: 2.25%;
   }
 }
 
