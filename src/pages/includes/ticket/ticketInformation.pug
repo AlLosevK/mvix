@@ -1,0 +1,45 @@
+section.ticket-submit
+  .container
+    .ticket-submit__map
+      a.map__item(href="#") My Area /
+      a.map__item(href="#") Submit a Ticket /
+    h1.ticket-submit__title Submit a ticket
+    .ticket-submit__information.information
+      h2.ticket-submit__subtitle.information__title Ticket Information
+      form.information__ticket
+        label.information__item.information__item-select(for="deviceName") Product
+          select.information__pole.information__pole-select
+            option Lorem ipsum dolor sit amet
+            option amet sit dolor ipsum meroL
+        label.information__item(for="deviceName") Device Name
+          input.information__pole(type="text" placeholder="Lorem ipsum dolor sit amet")
+        label.information__item(for="deviceName") Email
+          input.information__pole(type="email" required placeholder="Lorem ipsum dolor sit amet")
+          span.information__pole-error User don’t exzist
+        label.information__item(for="deviceName") Contact Name
+          input.information__pole(type="text" required placeholder="Lorem ipsum dolor sit amet")
+        label.information__item(for="deviceName") Subject
+          input.information__pole(type="text" required placeholder="Lorem ipsum dolor sit amet")
+        label.information__item.information__item-area(for="deviceName") Description
+          textarea.information__pole.information__pole-area(placeholder="Lorem ipsum dolor sit amet")
+        label.information__item(for="deviceName") Product Name
+          input.information__pole(type="text" placeholder="Lorem ipsum dolor sit amet")
+        h2.ticket-submit__subtitle Additional Information
+        label.information__item(for="deviceName") Priority
+          input.information__pole(type="text" placeholder="Lorem ipsum dolor sit amet")
+        label.information__item.information__item-select(for="deviceName") Classifications
+          select.information__pole.information__pole-select
+            option None
+            option High
+            option Medium
+            option Low
+        h2.ticket-submit__subtitle Attachments
+        .file
+          label(for="upload-photo").file__icon
+            +icon("upload")
+          label(for="upload-photo").information__item.information__item-file Attach a file
+            span (Up to 20 MB)
+            input#upload-photo(type="file" name="photo")
+        .ticket-submit__submit
+          input.ticket-submit__btn(type="submit" value="submit")
+          a.ticket-submit__link(href="#") Discard
