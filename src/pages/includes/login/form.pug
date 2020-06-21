@@ -3,18 +3,18 @@ form.form.login__form
   h1.form__title SIGN IN
   h3.form__subtitle New user? <a href="#">Create an account</a>
   .form__item
-    label.form__label.form__login User Name
+    label.form__label.form__login(for="login") User Name
     input.form__input(type="text" placeholder="Lorem ipsum dolor sit amet" id="login")
     span.form__input-error User don’t exzist
   .form__item
-    label.form__label.form__pass Password
+    label.form__label.form__pass(for="password") Password
     input.form__input(type="text" placeholder="Lorem ipsum dolor sit amet" id="password")
     span.form__input-error User don’t exzist 
   .form__check
-    label.switch
+    label.switch(for="rememberMe")
       input(type="checkbox" id="rememberMe")
       span.slider.round
-    label.form__check-content Remember Me
+    label.form__check-content(for="rememberMe") Remember Me
   a.form__link.form__link-pass(href="#") Forget password?
   input.form__btn(type="submit" value="continue")
   nav.form__footer

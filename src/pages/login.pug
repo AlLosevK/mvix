@@ -3,5 +3,7 @@ extends common/layoutLogin
 block content
   main.main.login
     .container
+      .login__icon-mob
+        +icon("x")
       img.login__icon(src="./img/logo_login.svg")
       include includes/login/form

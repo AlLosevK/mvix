@@ -2,19 +2,27 @@
   background-color: $deepBlue;
   width: 100vw;
   height: 100vh;
+
+  @include media-es {
+    background-color: $bg;
+  }
+
   & .container {
     justify-content: space-around;
     align-items: center;
     height: 100%;
+    position: relative;
 
     @include media-es {
-      flex-direction: column;
-      padding: 50px 0;
+      padding: 0;
+      margin: 0;
+      width: 100%;
     }
 
     @include media-s {
-      flex-direction: column;
-      padding: 50px 0;
+      padding: 0;
+      margin: 0;
+      width: 100%;
     }
 
     @include media-m {
@@ -24,17 +32,64 @@
 
   &__icon {
     min-width: 120px;
+    display: block;
 
     @include media-es {
-      margin: 50px 0 25px;
+      display: none;
     }
 
     @include media-s {
-      margin: 50px 0 25px;
+      display: block;
+      display: none;
     }
 
     @include media-m {
       margin-right: 20px;
+      display: block;
+    }
+
+    &-mob {
+      top: 7%;
+      right: 5%;
+      position: absolute;
+      padding: 10px;
+      box-shadow: 0px 4px 16px rgba(1, 24, 117, 0.08), 0px -4px 16px rgba(255, 255, 255, 0.2);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: none;
+
+      @include media-es {
+        display: block;
+      }
+
+      @include media-s {
+        display: none;
+      }
+
+      @include media-m {
+        display: none;
+      }
+
+      &:hover {
+        background-color: $deepBlue;
+
+        & svg {
+          color: $bg;
+        }
+      }
+
+      & svg {
+        &:hover {
+          color: $bg;
+        }
+        @include media-es {
+          top: 35%;
+          left: 50%;
+          display: block;
+          color: $deepBlue;
+        }
+      }
     }
   }
 }
