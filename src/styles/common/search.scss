@@ -23,6 +23,13 @@
     margin-top: -32px;
   }
 
+  @include media-el {
+    width: 1024px;
+    grid-template-columns: 10% 1fr 25%;
+    padding: 19px 22px;
+    margin-top: -32px;
+  }
+
   &__pole {
     border: none;
     font-size: 20px;

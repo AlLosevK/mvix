@@ -48,4 +48,8 @@ a {
   @include media-s {
     width: 88%;
   }
+
+  @include media-el {
+    width: 1280px;
+  }
 }

@@ -45,4 +45,36 @@
       font-size: 22px;
     }
   }
+
+  &-articles {
+    background-color: $deepBlue;
+    padding: 140px 0;
+    font-family: "Montserrat", sans-serif;
+
+    & .banner__title {
+      text-align: center;
+      width: 100%;
+      margin: 0;
+      margin-bottom: 20px;
+      line-height: 1.52em;
+    }
+
+    & .banner__subtitle {
+      text-align: center;
+      font-weight: normal;
+    }
+  }
+}
+
+.filter {
+  background: rgba(1, 24, 117, 0.8);
+  padding: 115px 0 240px;
+
+  @include media-es {
+    padding: 33px 0 203px;
+  }
+
+  @include media-s {
+    padding: 100px 0 200px;
+  }
 }
