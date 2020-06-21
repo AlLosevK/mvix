@@ -62,20 +62,21 @@
     }
 
     &-mob {
-      display: none;
+      display: grid;
       background-color: $grayBG;
       color: $deepBlue;
       position: absolute;
-      top: 96px;
+      top: -300px;
       left: 0;
       z-index: 2;
       width: 100vw;
       padding: 40px 60px;
+        grid-template-rows: 50px 50px 50px 50px;
 
 
       &.active {
-        display: grid;
-        grid-template-rows: 50px 50px 50px 50px;
+        top: 92px;
+        transition: top .7s;
       }
     }
   }
@@ -86,6 +87,15 @@
     text-decoration: none;
     text-align: center;
 
+    &:hover {
+      color: $deepBlue;
+      transition: all .7s;
+    }
+
+    &:visited {
+      color: $deepBlue;
+    }
+
     &-mob {
       text-align: center;
     }
@@ -95,6 +105,11 @@
       padding: 10px 30px;
       background-color: $blue;
       border-radius: 20px;
+
+      &:hover {
+        background-color: $deepBlue;
+        transition: all .7s;
+      }
 
       &-mob {
         width: 50%;
@@ -112,6 +127,10 @@
     padding-right: 24px;
     border-right: 1px solid #000;
 
+    @include media-es {
+      padding-right: 15px;
+    }
+
     @include media-l {
       padding-right: 15px;
     }
@@ -122,6 +141,10 @@
     margin: 0;
     margin-left: 24px;
     font-family: "Montserrat", sans-serif;
+
+    @include media-es {
+      margin-left: 15px;
+    }
 
     @include media-l {
       font-size: 12px;

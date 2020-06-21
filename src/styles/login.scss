@@ -1,0 +1,320 @@
+.login {
+  background-color: $deepBlue;
+  width: 100vw;
+  height: 100vh;
+  & .container {
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+
+    @include media-es {
+      flex-direction: column;
+      padding: 50px 0;
+    }
+
+    @include media-s {
+      flex-direction: column;
+      padding: 50px 0;
+    }
+
+    @include media-m {
+      flex-direction: row;
+    }
+  }
+
+  &__icon {
+    min-width: 120px;
+
+    @include media-es {
+      margin: 50px 0 25px;
+    }
+
+    @include media-s {
+      margin: 50px 0 25px;
+    }
+
+    @include media-m {
+      margin-right: 20px;
+    }
+  }
+}
+
+
+.form {
+  width: 560px;
+  background-color: $bg;
+  color: $deepBlue;
+  padding: 60px 47px 40px;
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 70px 60px 1fr 1fr 30px 56px 40px 50px;
+  font-family: "Montserrat", sans-serif;
+  align-items: stretch;
+
+  @include media-es {
+    margin: 0;
+    grid-template-rows: 40px 80px 1fr 1fr 30px 30px 46px;
+    width: 95%;
+    padding: 30px 25px;
+  }
+
+  &__item {
+    grid-column: 1/3;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    grid-column: 1/3;
+    grid-row: 1;
+    margin: 0;
+    font-size: 44px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.27em;
+
+    @include media-es {
+      font-size: 24px;
+    }
+  }
+
+  &__subtitle {
+    grid-column: 1/3;
+    grid-row: 2;
+    margin: 0;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.53em;
+    border-bottom: 2px solid $deepBlue;
+    margin-bottom: 20px;
+
+    @include media-es {
+      font-size: 17px;
+    }
+
+    & a {
+      color: $blue;
+      text-decoration: none;
+
+      &:visited {
+        color: $blue;
+      }
+
+      &:active {
+        color: $blue;
+      }
+    }
+  }
+
+  &__label {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-weight: bold;
+
+    @include media-es {
+      display: none;
+    }
+
+    @include media-l {
+      display: flex;
+    }
+  }
+
+  &__login {
+    grid-row: 3;
+  }
+
+  &__pass {
+    grid-row: 4;
+  }
+
+  &__input {
+    box-shadow: 0px 4px 16px rgba(1, 24, 117, 0.08), 0px -4px 16px rgba(255, 255, 255, 0.2);
+    border-radius: 32px;
+    width: 100%;
+    font-family: "Nunito Sans", sans-serif;
+    color: rgba(1, 24, 117, 0.4);
+    border: none;
+    font-size: 17px;
+    height: 1.54em;
+    padding: 28px 33px;
+    margin: 10px 0;
+
+    @include media-es {
+      padding: 24px 18px;
+    }
+
+    &-error {
+      font-size: 12px;
+      line-height: 1.42;
+      color: $pink;
+      font-weight: normal;
+      padding-left: 33px;
+    }
+  }
+
+  &__check {
+      @include media-es {
+        grid-column: 1/3;
+        text-align: center;
+        grid-row: 5;
+      }
+
+      &-content {
+        margin-left: 10px;
+      }
+  }
+
+  &__link {
+    font-size: 12px;
+    line-height: 1.42em;
+    margin: 0 10px;
+    color: $blue;
+
+    &:hover {
+      color: $blue;
+    }
+
+    &:visited {
+      color: $blue;
+    }
+
+    &-pass {
+      text-align: right;
+      @include media-es {
+        grid-column: 1/3;
+        grid-row: 6;
+        text-align: center;
+      }
+    }
+  }
+
+  &__btn {
+    grid-column: 1/3;
+    grid-row: 6;
+    background: $bvGrad;
+    box-shadow: 0px 4px 16px rgba(1, 24, 117, 0.08), 0px -4px 16px rgba(255, 255, 255, 0.2);
+    border-radius: 32px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $bg;
+
+    &:hover {
+      background: $oyGrad;
+    }
+
+    @include media-es {
+      grid-row: 7;
+    }
+  }
+
+  &__footer {
+    grid-column: 1/3;
+    grid-row: 7;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid $deepBlue;
+
+    @include media-es {
+      display: none;
+    }
+
+    @include media-l {
+      display: flex;
+    }
+  }
+
+  &__notice {
+    grid-column: 1/3;
+    grid-row: 8;
+    font-family: "Nunito Sans", sans-serif;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.67em;
+    text-align: center;
+
+    @include media-es {
+      display: none;
+    }
+
+    @include media-l {
+      display: block;
+    }
+  }
+
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+ position: relative;
+ display: inline-block;
+ width: 30px;
+ height: 15px;
+ vertical-align: middle;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+ opacity: 0;
+ width: 0;
+ height: 0;
+}
+
+/* The slider */
+.slider {
+ position: absolute;
+ cursor: pointer;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: #ccc;
+ -webkit-transition: .4s;
+ transition: .4s;
+}
+
+.slider:before {
+ position: absolute;
+ content: "";
+ height: 13px;
+ width: 13px;
+ left: 1px;
+ bottom: 1px;
+ background-color: white;
+ -webkit-transition: .4s;
+ transition: .4s;
+}
+
+input:checked + .slider {
+ background-color: $deepBlue;
+}
+
+input:focus + .slider {
+ box-shadow: 0 0 1px $deepBlue;
+}
+
+input:checked + .slider:before {
+ -webkit-transform: translateX(14px);
+ -ms-transform: translateX(14px);
+ transform: translateX(14px);
+}
+
+/* Rounded sliders */
+.slider.round {
+ border-radius: 34px;
+}
+
+.slider.round:before {
+ border-radius: 50%;
+}
