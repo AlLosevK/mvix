@@ -207,6 +207,11 @@
     color: $deepBlue;
     outline: none;
 
+    &:hover {
+      box-shadow: 0px 0 10px rgba(137, 137, 137, .9);
+    }
+
+
     &-area {
       resize: none;
       height: 176px;
@@ -272,6 +277,7 @@
     &:hover {
       background: $deepBlue;
       color: $bg;
+      box-shadow: 0px 0 10px rgba(137, 137, 137, .9);
     }
   }
 

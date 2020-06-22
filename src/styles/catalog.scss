@@ -113,6 +113,10 @@
     }
 
     .sidebar {
+
+      &__title {
+        margin-bottom: 20px;
+      }
       &__item {
         margin-bottom: 16px;
         background-color: $bg;
@@ -121,6 +125,10 @@
         padding: 15px 60px 15px 15px;
         text-transform: uppercase;
         box-shadow: 0px 4px 16px rgba(1, 24, 117, 0.08), 0px -4px 16px rgba(255, 255, 255, 0.2);
+
+        &:hover {
+          box-shadow: 0px 0 10px rgba(137, 137, 137, .9);
+        }
 
         &:hover {
           background-color: $deepBlue;
@@ -150,6 +158,10 @@
 
         &:hover {
           color: $deepBlue;
+
+          &:before {
+            visibility: hidden;
+          }
         }
 
         &:active {
@@ -262,6 +274,10 @@
     color: $deepBlue;
     box-shadow: 0px 4px 16px rgba(1, 24, 117, 0.08), 0px -4px 16px rgba(255, 255, 255, 0.2);
 
+    &:hover {
+      box-shadow: 0px 0 10px rgba(137, 137, 137, .9);
+    }
+
     &.prev:last-child  svg{
       transform: rotate(180deg);
     }
@@ -291,6 +307,10 @@
     &:hover {
       color: $bg;
       background: $deepBlue;
+
+      &:before {
+        visibility: hidden;
+      }
     }
   }
   &.pagination--center {

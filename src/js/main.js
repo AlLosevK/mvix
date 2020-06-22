@@ -3,6 +3,7 @@ new Glide('.glide', {
   startAt: 0,
   perView: 4,
   perTouch: 1,
+  autoplay: 2000,
   breakpoints: {
     768: {
       perView: 2
