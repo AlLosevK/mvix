@@ -1,0 +1,45 @@
+.sidebar {
+
+  &__title {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.33em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    border-bottom: 1px solid $deepBlue;
+    margin: 3% 0 0;
+    padding-bottom: 16px;
+    color: $deepBlue;
+  }
+
+  &__item {
+    font-size: 17px;
+    line-height: 1.52em;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    border-bottom: 1px solid $deepBlue;
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    align-items: center;
+
+    @include media-m {
+      padding: 15px;
+      font-size: 14px;
+    }
+  }
+
+  &__link {
+    font-size: 15px;
+    line-height: 1.4em;
+    font-weight: normal;
+    color: $blue;
+  }
+
+  &__icon {
+    margin-right: 10px;
+    color: $deepBlue;
+    width: 10px;
+    height: 12px;
+  }
+}
