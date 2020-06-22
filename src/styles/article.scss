@@ -5,25 +5,70 @@
   }
 
   .search {
-    width: 70%;
-    margin: -32px 0 0 0;
+    width: 68%;
+    margin: 0;
+    margin-top: -32px;
     padding: 10px 8px 10px 30px;
+
+    @include media-es {
+      width: 100%;
+      margin-top: -80px;
+    }
+
+    @include media-s {
+      width: 100%;
+      margin-top: -80px;
+    }
+
+    @include media-m {
+      width: 100%;
+      margin-top: -80px;
+    }
+
+    @include media-l {
+      width: 70%;
+      margin: 0;
+      margin-top: -32px;
+    }
 
     &__btn {
       padding: 10px 0;
     }
 
     &-ticket {
-      width: 30%;
+      width: 27%;
       text-align: center;
       margin-top: -32px;
+
+      @include media-es {
+        display: none;
+      }
+
+      @include media-s {
+        display: none;
+      }
+
+      @include media-m {
+        display: none;
+      }
+
+      @include media-l {
+        display: block;
+      }
 
       &__btn {
         border: 8px solid $bg;
         width: 100%;
         box-shadow: 0px 16px 40px rgba(0, 0, 0, 0.08);
         padding: 15px 80px;
-        margin-top: -32px;
+        display: block;
+
+        @include media-m {
+          padding: 15px 50px;
+        }
+
+        @include media-l {
+        }
       }
     }
   }
@@ -38,10 +83,38 @@
     grid-column-gap: 5%;
     align-items: flex-start;
     padding: 40px 0;
+
+    @include media-es {
+      grid-template-columns: 1fr;
+      grid-template-rows: 70px 1fr;
+    }
+
+    @include media-s {
+      grid-template-columns: 1fr;
+      grid-template-rows: 70px 1fr;
+    }
+
+    @include media-m {
+      grid-template-columns: 70% 25%;
+      grid-template-rows: 50px 1fr;
+    }
   }
 
   &__map {
-    grid-column: 1/3;
+  }
+
+  &__related {
+    @include media-es {
+      display: none;
+    }
+
+    @include media-s {
+      display: none;
+    }
+
+    @include media-m {
+      display: block;
+    }
   }
 }
 
@@ -53,12 +126,28 @@
   background: $bg;
   border-radius: 16px;
 
+  @include media-es {
+    padding: 0;
+    background: $grayBG;
+    border-radius: 0;
+  }
+
+  @include media-s {
+  }
+
+  @include media-m {
+    padding: 35px 70px 10px 50px;
+    background: $bg;
+    border-radius: 16px;
+  }
+
   &__titles {
     display: grid;
     grid-template-rows: 1fr auto;
     grid-template-columns: 1fr 80px;
     grid-row-gap: 30px;
     border-bottom: 1px solid $deepBlue;
+    margin-bottom: 20px;
   }
 
   &__title {
@@ -68,6 +157,18 @@
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
     margin: 0;
+
+    @include media-es {
+      font-size: 24px;
+    }
+
+    @include media-s {
+      font-size: 32px;
+    }
+
+    @include media-l {
+      font-size: 44px;
+    }
   }
 
   &__descr {
@@ -76,6 +177,21 @@
     font-weight: normal;
     margin: 0;
     margin-bottom: 15px;
+
+    @include media-es {
+      grid-column: 1/3;
+      font-size: 16px;
+    }
+
+    @include media-s {
+      grid-column: 1/3;
+      font-size: 19px;
+    }
+
+    @include media-l {
+      font-size: 44px;
+      font-size: 21px;
+    }
   }
 
   &__icon {
@@ -99,6 +215,18 @@
     padding-bottom: 32px;
     border-bottom: 1px solid $deepBlue;
     margin: 0;
+
+    @include media-es {
+      display: none;
+    }
+
+    @include media-s {
+      display: none;
+    }
+
+    @include media-m {
+      display: block;
+    }
   }
 
   &__footer {
@@ -107,6 +235,18 @@
     text-replace: auto;
     align-items: center;
     justify-content: space-between;
+
+    @include media-es {
+      display: none;
+    }
+
+    @include media-s {
+      display: none;
+    }
+
+    @include media-m {
+      display: block;
+    }
   }
 }
 
@@ -119,6 +259,18 @@
     font-family: "Montserrat", sans-serif;
     margin: 0;
     margin-bottom: 10px;
+
+    @include media-es {
+      font-size: 18px;
+    }
+
+    @include media-s {
+      font-size: 20px;
+    }
+
+    @include media-l {
+      font-size: 23px;
+    }
   }
 
   &__item {
@@ -127,6 +279,20 @@
     line-height: 2.82em;
     border-left: 2px solid $blue;
     position: relative;
+
+    @include media-es {
+      font-size: 14px;
+      padding-bottom: 15px;
+    }
+
+    @include media-s {
+      font-size: 14px;
+    }
+
+    @include media-l {
+      font-size: 17px;
+      padding-bottom: 0;
+    }
 
     &-icon {
       position: absolute;
