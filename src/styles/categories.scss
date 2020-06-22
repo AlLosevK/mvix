@@ -29,7 +29,7 @@
 
     @include media-es {
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr minmax(150px, 1fr) minmax(150px, 1fr) minmax(150px, 1fr) 1fr;
+      grid-template-rows: 1fr repeat(3, auto) 1fr;
       gap: 20px;
     }
 
@@ -188,6 +188,7 @@
   @include media-es {
     grid-template-columns: 50% 50%;
     grid-template-rows: 35% 65%;
+    grid-row-gap: 50px;
     padding: 15px;
   }
 
@@ -202,8 +203,53 @@
   }
 
   &.active {
-    grid-template-columns: 40% 55%;
-    grid-template-rows: 26px 32px 23px 130px 44px 1px 16px;
+    display: none;
+    grid-row-gap: 0;
+
+    @include media-es {
+      display: grid;
+      // grid-row: 1/3;
+      grid-column: 1/3;
+      grid-template-columns: 40% 55%;
+      grid-template-rows: 26px 32px 23px 130px 44px 1px 16px;
+    }
+
+    & .category__label {
+      @include media-es {
+        display: block;
+      }
+    }
+    & .category__title {
+      @include media-es {
+        display: block;
+        grid-row: 2;
+      }
+    }
+    & .category__info {
+      @include media-es {
+        display: block;
+      }
+    }
+    & .category__icon {
+      @include media-es {
+        display: block;
+      }
+    }
+    & .category__icon-mob {
+      @include media-es {
+        display: none;
+      }
+    }
+    & .category__split {
+      @include media-es {
+        display: block;
+      }
+    }
+    & .category__descr {
+      @include media-es {
+        display: block;
+      }
+    }
   }
 
   &:hover {
@@ -219,7 +265,7 @@
     color: $pink;
 
     @include media-es {
-      // font-size: 13px;
+      font-size: 13px;
       display: none;
     }
   }
@@ -234,8 +280,9 @@
     @include media-es {
       grid-column: 1/3;
       grid-row: 1;
-      font-size: 14px;
+      font-size: 20px;
       line-height: 1.25em;
+      font-family: "Huhito Sans", sans-serif;
     }
 
     @include media-s {
@@ -273,11 +320,11 @@
       display: none;
 
       @include media-es {
-        display: block;
+        display: inline;
         grid-column: 2;
         grid-row: 2;
-        width: 60%;
-        height: 60%;
+        min-height: 45px;
+        min-width: 45px;
       }
 
       @include media-m {

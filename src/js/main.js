@@ -11,7 +11,8 @@ new Glide('.glide', {
     600: {
       perView: 1,
       focusAt: 'center',
-      perTouch: 1
+      perTouch: 1,
+      gap: 6
     }
   },
   focusAt: 'center',
