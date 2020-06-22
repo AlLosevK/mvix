@@ -7,28 +7,28 @@ section.ticket-submit
     .ticket-submit__information.information
       h2.ticket-submit__subtitle.information__title Ticket Information
       form.information__ticket
-        label.information__item.information__item-select(for="deviceName") Product
-          select.information__pole.information__pole-select
+        label.information__item.information__item-select(for="selectProduct") Product
+          select.information__pole.information__pole-select#selectProduct
             option Lorem ipsum dolor sit amet
             option amet sit dolor ipsum meroL
         label.information__item(for="deviceName") Device Name
-          input.information__pole(type="text" placeholder="Lorem ipsum dolor sit amet")
-        label.information__item(for="deviceName") Email
-          input.information__pole(type="email" required placeholder="Lorem ipsum dolor sit amet")
+          input.information__pole#deviceName(type="text" placeholder="Lorem ipsum dolor sit amet")
+        label.information__item(for="email") Email
+          input.information__pole#email(type="email" required placeholder="Lorem ipsum dolor sit amet")
           span.information__pole-error User don’t exzist
-        label.information__item(for="deviceName") Contact Name
-          input.information__pole(type="text" required placeholder="Lorem ipsum dolor sit amet")
-        label.information__item(for="deviceName") Subject
-          input.information__pole(type="text" required placeholder="Lorem ipsum dolor sit amet")
-        label.information__item.information__item-area(for="deviceName") Description
-          textarea.information__pole.information__pole-area(placeholder="Lorem ipsum dolor sit amet")
-        label.information__item(for="deviceName") Product Name
-          input.information__pole(type="text" placeholder="Lorem ipsum dolor sit amet")
+        label.information__item(for="contactName") Contact Name
+          input.information__pole#contactName(type="text" required placeholder="Lorem ipsum dolor sit amet")
+        label.information__item(for="subject") Subject
+          input.information__pole#subject(type="text" required placeholder="Lorem ipsum dolor sit amet")
+        label.information__item.information__item-area(for="description") Description
+          textarea.information__pole.information__pole-area#description(placeholder="Lorem ipsum dolor sit amet")
+        label.information__item(for="productName") Product Name
+          input.information__pole#productName(type="text" placeholder="Lorem ipsum dolor sit amet")
         h2.ticket-submit__subtitle Additional Information
-        label.information__item(for="deviceName") Priority
-          input.information__pole(type="text" placeholder="Lorem ipsum dolor sit amet")
-        label.information__item.information__item-select(for="deviceName") Classifications
-          select.information__pole.information__pole-select
+        label.information__item(for="priority") Priority
+          input.information__pole#priority(type="text" placeholder="Lorem ipsum dolor sit amet")
+        label.information__item.information__item-select(for="selectClassification") Classifications
+          select.information__pole.information__pole-select#selectClassification
             option None
             option High
             option Medium
