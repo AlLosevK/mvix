@@ -280,9 +280,9 @@
     @include media-es {
       grid-column: 1/3;
       grid-row: 1;
-      font-size: 20px;
+      font-size: 16px;
       line-height: 1.25em;
-      font-family: "Huhito Sans", sans-serif;
+      font-family: "Nunito Sans", sans-serif;
     }
 
     @include media-s {
