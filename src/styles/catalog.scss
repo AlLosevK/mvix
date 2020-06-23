@@ -130,7 +130,7 @@
 
         &:hover {
           background-color: $deepBlue;
-          color: $bg;
+          color: $oyGrad;
           box-shadow: 0px 0px 10px rgba(10, 10, 10, 0.9);
 
           & .sidebar__link {
@@ -321,6 +321,7 @@
     transition: all 0.4s;
 
     &:hover {
+      -webkit-text-fill-color: $bg;
       color: $bg;
       background: $deepBlue;
 

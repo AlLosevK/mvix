@@ -65,6 +65,8 @@
 
         &:hover {
           box-shadow: 0px 0 10px rgba(137, 137, 137, .9);
+          -webkit-text-fill-color: $bg;
+          color: $bg;
         }
 
         @include media-m {
@@ -371,13 +373,6 @@
     margin-right: 15px;
     cursor: pointer;
 
-
-    &:hover {
-      &:before {
-        visibility: hidden;
-      }
-    }
-
     &-like {
       color: $blue;
       }
@@ -386,7 +381,12 @@
       color: $orange;
       }
 
-
+    &:hover {
+      .rate__item-like {
+        -webkit-text-fill-color: $blue;
+        color: $blue;
+      }
+    }
   }
 
   &__icon {

@@ -112,11 +112,10 @@
 
       &:hover {
         background-color: $deepBlue;
-        transition: all .7s;
-
-        &:before {
-          visibility: hidden;
-        }
+        background: -webkit-linear-gradient(256.23deg, #EA8537 0%, #EFC02E 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border: 1px solid $blue;
       }
 
       &:focus {

@@ -27,24 +27,11 @@ a {
     text-decoration: none;
     transition: all 0.3s ease-in-out;
     position: relative;
-    &:before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      bottom: -5px;
-      left: 0;
-      background-color: lighten($deepBlue, 50%);
-      visibility: hidden;
-      transition: all 0.3s ease-in-out 0s;
-      transform: scaleX(0);
-    }
 
     &:hover {
-      &:before {
-        visibility: visible;
-        transform: scaleX(1);
-      }
+      background: -webkit-linear-gradient(256.23deg, #EA8537 0%, #EFC02E 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 }
 
