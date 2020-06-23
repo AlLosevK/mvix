@@ -34,7 +34,7 @@ a {
       height: 2px;
       bottom: 0;
       left: 0;
-      background-color: $deepBlue;
+      background-color: lighten($deepBlue, 10%);
       visibility: hidden;
       transition: all 0.3s ease-in-out 0s;
       transform: scaleX(0);

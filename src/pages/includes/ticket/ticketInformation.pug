@@ -1,8 +1,12 @@
 section.ticket-submit
   .container
     .ticket-submit__map
-      a.map__item(href="#") My Area /
-      a.map__item(href="#") Submit a Ticket /
+      .map__item-container
+        a.map__item(href="#") My Area 
+        span /
+      .map__item-container
+        a.map__item(href="#") Submit a Ticket 
+        span /
     h1.ticket-submit__title Submit a ticket
     .ticket-submit__information.information
       h2.ticket-submit__subtitle.information__title Ticket Information
@@ -37,8 +41,9 @@ section.ticket-submit
         .file
           label(for="upload-photo").file__icon
             +icon("upload")
-          label(for="upload-photo").information__item.information__item-file Attach a file
-            span (Up to 20 MB)
+          label(for="upload-photo").information__item.information__item-file 
+            a(href="#") Attach a file
+              span (Up to 20 MB)
             input#upload-photo(type="file" name="photo")
         .ticket-submit__submit
           input.ticket-submit__btn(type="submit" value="submit")

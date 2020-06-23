@@ -2,6 +2,7 @@
   margin-bottom: 30px;
   color: $deepBlue;
   font-family: "Montserrat", sans-serif;
+  padding-top: 22px;
 
   .container {
     display: grid;
@@ -92,7 +93,7 @@
   }
 
   &__btn {
-    background: linear-gradient(73.07deg, #2275B4 0%, #60348D 100%);
+    background: $bvGrad;
     border-radius: 32px;
     font-weight: bold;
     font-size: 23px;
@@ -102,6 +103,10 @@
     border: none;
     padding: 10px 136px;
     margin-right: 80px;
+
+    &:hover {
+      background: $oyGrad;
+    }
 
     @include media-es {
       display: block;
@@ -167,6 +172,40 @@
     font-size: 17px;
     line-height: 1.53em;
     font-weight: bold;
+    a {
+      &:hover {
+        color: $deepBlue;
+        transition: all .7s;
+
+        span {
+          &:before {
+            visibility: visible;
+            transform: scaleX(1);
+          }
+        }
+      }
+
+      &:visited {
+        color: $deepBlue;
+      }
+
+      span {
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: lighten($deepBlue, 10%);
+          visibility: hidden;
+          transition: all 0.3s ease-in-out 0s;
+          transform: scaleX(0);
+        }
+      }
+    }
     &-file {
       cursor: pointer;
 

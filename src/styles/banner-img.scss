@@ -13,4 +13,14 @@
     background: url("../img/shutterstock_309194747.jpg");
     background-size: cover;
   }
+
+  & .banner__subtitle {
+    line-height: 1em;
+    font-size: 32px;
+  }
+
+  & .banner__title {
+    line-height: 1.43em;
+    font-size: 56px;
+  }
 }

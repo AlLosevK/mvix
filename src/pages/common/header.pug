@@ -3,12 +3,16 @@ header.header
     .header__logo
       img.logo__icon(src="./img/logo.svg" alt="logo")
       p.logo__desc mvix client
-        span succes portal
+        span success portal
     nav.header__nav
-      a.header__link(href="#") Knowledge Base
-      a.header__link(href="#") Submit a Ticket
-      a.header__link(href="#") Mvix Digital signage
-      a.header__link-signin(href="#") Sign in
+      .header__link-container
+        a.header__link(href="#") Knowledge Base
+      .header__link-container
+        a.header__link(href="#") Submit a Ticket
+      .header__link-container
+        a.header__link(href="#") Mvix Digital signage
+      .header__link-container
+        a.header__link-signin(href="#") Sign in
 header.header-mob
   .container
     .header__logo
@@ -17,8 +21,12 @@ header.header-mob
         span succes portal
     img.menu__icon#menuBTN(src="img/menu.svg" alt="menuBurger")
     nav.header__nav-mob#menuNav
-      a.header__link-mob(href="#") Knowledge Base
-      a.header__link-mob(href="#") Submit a Ticket
-      a.header__link-mob(href="#") Mvix Digital signage
-      a.header__link-signin.header__link-signin-mob(href="#") Sign in
+      .header__link-container
+        a.header__link-mob(href="#") Knowledge Base
+      header__link-container
+        a.header__link-mob(href="#") Submit a Ticket
+      header__link-container
+        a.header__link-mob(href="#") Mvix Digital signage
+      header__link-container
+        a.header__link-signin.header__link-signin-mob(href="#") Sign in
 include warning

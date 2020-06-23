@@ -116,6 +116,7 @@
 
       &__title {
         margin-bottom: 20px;
+        padding-bottom: 0;
       }
       &__item {
         margin-bottom: 16px;
@@ -125,14 +126,12 @@
         padding: 15px 60px 15px 15px;
         text-transform: uppercase;
         box-shadow: 0px 4px 16px rgba(1, 24, 117, 0.08), 0px -4px 16px rgba(255, 255, 255, 0.2);
-
-        &:hover {
-          box-shadow: 0px 0 10px rgba(137, 137, 137, .9);
-        }
+        transition: all .7s;
 
         &:hover {
           background-color: $deepBlue;
           color: $bg;
+          box-shadow: 0px 0px 10px rgba(10, 10, 10, 0.9);
 
           & .sidebar__link {
             color: $bg;
@@ -142,6 +141,7 @@
         &.active {
           background-color: $deepBlue;
           color: $bg;
+          box-shadow: 0px 0px 10px rgba(10, 10, 10, 0.9);
 
           & .sidebar__link {
             color: $bg;
@@ -183,10 +183,18 @@
 
 .map {
   &__item {
-    padding-right: 5px;
     font-size: 15px;
     line-height: 1.07em;
     color: $blue;
+
+    &-container {
+      display: inline;
+
+      & span {
+        padding-right: 5px;
+        color: $deepBlue;
+      }
+    }
   }
 }
 
@@ -225,12 +233,13 @@
     align-items: center;
     padding: 0;
     margin: 0;
+    list-style: none;
 
     & li {
-      margin-left: 20px;
+      margin-left: 10px;
+
       &:first-child {
         margin: 0;
-        list-style: none;
       }
     }
   }
@@ -239,6 +248,13 @@
     font-size: 12px;
     font-family: 1.66em;
     color: $deepBlue;
+
+    &-icon {
+      color: $deepBlue;
+      font-size: 10px;
+      margin-right: 10px;
+    }
+
     &:hover {
       color: $deepBlue;
     }
@@ -275,7 +291,7 @@
     box-shadow: 0px 4px 16px rgba(1, 24, 117, 0.08), 0px -4px 16px rgba(255, 255, 255, 0.2);
 
     &:hover {
-      box-shadow: 0px 0 10px rgba(137, 137, 137, .9);
+      box-shadow: 0px 0px 10px rgba(10, 10, 10, 0.9);
     }
 
     &.prev:last-child  svg{
